@@ -6,6 +6,7 @@ import NavbarHeader from "../NavbarHeader";
 import { Container, Col, Row } from "react-bootstrap";
 import SideMenu from "../SideMenu";
 import GalleryPage from "../GalleryPage";
+import AlertMsg from "../AlertMsg";
 
 const Routes = () => {
   return (
@@ -15,6 +16,7 @@ const Routes = () => {
         <Row>
           <SideMenu />
           <Col md={9}>
+            <AlertMsg />
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/gallery" component={GalleryPage} />

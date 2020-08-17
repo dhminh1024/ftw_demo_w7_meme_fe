@@ -24,7 +24,9 @@ const MemeCard = ({ meme, showDetail }) => {
     >
       <Card.Img
         variant="top"
-        src="https://www.fosi.org/media/images/22601782810_cbe3ede5f5_o.focus-none.original.jpg"
+        src={`${process.env.REACT_APP_BACKEND_API}/${
+          meme.outputMemePath.split("public/")[1]
+        }?${meme.updatedAt}`}
       />
     </Card>
   );
